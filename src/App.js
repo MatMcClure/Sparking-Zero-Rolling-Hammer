@@ -41,6 +41,7 @@ function App() {
           className="search-bar"
         />
       </header>
+      
       <div className="social-icons">
         <a href="https://www.twitch.tv/vixzo" target="_blank" rel="noopener noreferrer">
           <img
