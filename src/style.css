@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   padding: 20px;
-  background: black;
+  /*background: black;*/
 }
 
 .App-logo {
@@ -15,8 +15,51 @@
   }
 }
 
+@media (orientation: portrait) {
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    width: 600px;
+    height: 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    padding-left: 1%
+  }
+
+  .character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -50px;
+  }
+}
+
+@media (orientation: landscape) {
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    width: 1000px;
+    height: 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    padding-left: 1%
+  }
+
+  .character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -50px;
+  }
+}
+
 .App-header {
-  background-color: #000000;
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -27,22 +70,16 @@
 }
 
 .App-main {
-  background-color: black;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw; /* Prevents content from exceeding the viewport width */
+  box-sizing: border-box;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-.character-grid {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 20px;
-  justify-items: center;
 }
 
 @keyframes App-logo-spin {
@@ -52,6 +89,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.App.light {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.App.dark .character {
+  border-color: white;
+}
+
+.App.light .character {
+  border-color: black;
+}
+
+.App.dark .icon {
+  filter: invert(100%) saturate(0%) brightness(500%);
+}
+
+.App.light .icon {
+  filter: saturate(80%);
 }
 
 .Logo {
@@ -70,63 +133,42 @@
   font-weight: bold; 
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 150px;
-  width: 1000px;
-}
-
-.search-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  flex: 1;
-}
-
-.search-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #000000;
-  border: solid;
-  border-radius: 4px;
-  cursor: pointer;
-  border-color:white;
-}
-
-.search-button:hover {
-  background-color: #0056b3;
-}
-
 .character {
   width: 150px;
   height: auto;
   margin-top: 20px;
   border-radius: 10%;
   border: solid;
-  border-color: rgb(87, 87, 87);
+  /*border-color: rgb(87, 87, 87);*/
 }
 
 .video-container video {
   max-width: 100%;
-  border-radius: 10%;
 }
 
 .social-icons {
   display: flex;
   gap: 10px;
   position: absolute;
-  top: 10px; /* Adjust distance from the top */
-  right: 10px; /* Adjust distance from the right */
-  border-radius: 5px; /* Optional: Rounds the edges of the container */
+  top: 10px; 
+  right: 10px; 
+  border-radius: 5px; 
   height: 10px;
 }
 
 .icon{
   height: 50px;
   width: 50px;
-  filter: grayscale(100%)
+  filter: invert(100%) saturate(0%) brightness(500%);
+}
+
+.theme-toggle {
+  position: absolute; /* Place the button at the top-left corner */
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px; /* Adjust icon size */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }

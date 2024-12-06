@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import logo from './images/sparking-banner.png';
 import ssjgokumidVid from './videos/ssjgokumid-turn-around.mp4';
@@ -13,6 +13,18 @@ import gogeta4Vid from './videos/gogeta4-turn-around.mp4';
 import bardockVid from './videos/bardock-turn-around.mp4';
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
+  useEffect(() => {
+    document.body.className = theme; // Optional: Apply theme to the entire body
+  }, [theme]);
+
   const [searchQuery, setSearchQuery] = useState(""); // Track the search query
   const [visibleVideo, setVisibleVideo] = useState(""); // Track which video is visible
 
@@ -30,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+      <div className={`App ${theme}`}> {/* Dynamically apply theme class */}
       <header className="App-header">
         <img src={logo} alt="Logo" className="Logo" />
           <input
@@ -39,7 +51,10 @@ function App() {
           onChange={handleSearch}
           placeholder="Search for a character"
           className="search-bar"
-        />
+          />
+      <button className="theme-toggle" onClick={toggleTheme}>
+        {theme === "dark" ? "☀️" : "🌙"}
+      </button>
       </header>
       
       <div className="social-icons">
