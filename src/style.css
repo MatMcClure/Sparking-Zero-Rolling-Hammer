@@ -1,6 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App.dark body {
+  background-color: #121212;
+  color: white;
+}
+
+.App.light body {
+  background-color: white;
+  color: #121212;
+}
+
 .App {
   text-align: center;
   padding: 20px;
+  min-height: 100vh;
   /*background: black;*/
 }
 
@@ -29,7 +47,8 @@
 
   .character-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -51,7 +70,9 @@
 
   .character-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -142,10 +163,6 @@
   /*border-color: rgb(87, 87, 87);*/
 }
 
-.video-container video {
-  max-width: 100%;
-}
-
 .social-icons {
   display: flex;
   gap: 10px;
@@ -171,4 +188,23 @@
   font-size: 24px; /* Adjust icon size */
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%; /* Ensure the container doesn't exceed screen width */
 }

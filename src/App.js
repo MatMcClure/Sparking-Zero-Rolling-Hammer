@@ -26,7 +26,7 @@ function App() {
   }, [theme]);
 
   const [searchQuery, setSearchQuery] = useState(""); // Track the search query
-  const [visibleVideo, setVisibleVideo] = useState(""); // Track which video is visible
+  const [setVisibleVideo] = useState(""); // Track which video is visible
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value); // Update search query in real-time
@@ -37,8 +37,41 @@ function App() {
   };
 
   const isCharacterMatch = (character) => {
-    // Check if the character matches the search query (case-insensitive)
     return character.toLowerCase().includes(searchQuery.toLowerCase());
+  };
+
+  const openCustomFullscreen = (videoSrc) => {
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100vh";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.8)"; 
+    overlay.style.display = "flex";
+    overlay.style.justifyContent = "center";
+    overlay.style.alignItems = "center";
+    overlay.style.zIndex = "1000";
+  
+    const videoElement = document.createElement("video");
+    videoElement.src = videoSrc;
+    videoElement.controls = true;
+    videoElement.style.width = "60%"; 
+    videoElement.style.height = "auto";
+    videoElement.style.objectFit = "cover";
+    videoElement.loop = true;
+  
+    // Close overlay on click outside the video
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        document.body.removeChild(overlay);
+      }
+    });
+  
+    overlay.appendChild(videoElement);
+    document.body.appendChild(overlay);
+  
+    videoElement.play();
   };
 
   return (
@@ -52,7 +85,7 @@ function App() {
           placeholder="Search for a character"
           className="search-bar"
           />
-      <button className="theme-toggle" onClick={toggleTheme}>
+      <button className="theme-toggle" onClick={toggleTheme}> {/* Theme toggle */}
         {theme === "dark" ? "☀️" : "🌙"}
       </button>
       </header>
@@ -83,6 +116,7 @@ function App() {
       <div className="App-main">
         <div className="character-grid">
 
+        {/* All characters formatted the same */}
           {/* SSJ Goku (MID) */}
           {isCharacterMatch("ssj goku mid") && (
             <div>
@@ -90,72 +124,39 @@ function App() {
                 src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728251687addtextcommtc0nzi4mju1nta.png"
                 alt="SSJ Goku (MID)"
                 className="character"
-                onClick={() => handleImageClick("ssjgokumid")}
+                onClick={() => openCustomFullscreen(ssjgokumidVid)}
                 style={{ cursor: "pointer" }}
               />
-              {visibleVideo === "ssjgokumid" && (
-                <div className="video-container" style={{ marginTop: "20px" }}>
-                  <video
-                    src={ssjgokumidVid}
-                    controls
-                    width="600"
-                    style={{ display: "block", margin: "0 auto" }}
-                  >
-                  </video>
-                </div>
-              )}
             </div>
           )}
 
-          {/*SSJ Goku (END)*/}
+          {/* SSJ Goku (END) */}
           {isCharacterMatch("ssj goku end") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727648924addtextcommtgynziwmzczmdu.png"
               alt="SSJ Goku (END)"
               className="character"
-              onClick={() => handleImageClick("ssjgokuend")}
+              onClick={() => openCustomFullscreen(ssjgokuendVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "ssjgokuend" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={ssjgokuendVid}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} 
-          </div>
+            </div>
           )}
 
-          {/*SSJ2 Goku (END)*/}
+          {/* SSJ2 Goku (END) */}
           {isCharacterMatch("ssj2 goku end") && (
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtqwmti5ndewnde.png"
               alt="SSJ2 Goku (END)"
               className="character"
-              onClick={() => handleImageClick("ssj2gokuend")}
+              onClick={() => openCustomFullscreen(ssj2gokuendVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "ssj2gokuend" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={ssj2gokuendVid}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
-          </div>
+            </div>
           )}
         
-          {/*SSJ3 Goku*/}
+          {/* SSJ3 Goku */}
           {isCharacterMatch("ssj3 goku end") && (
           <div>
             <img
@@ -179,79 +180,46 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Goku (DBS)*/}
+          {/* SSJ Goku (DBS) */}
           {isCharacterMatch("ssj goku super") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726369739addtextcommjmwmtmxntg4njq.png"
               alt="SSJ Goku (DBS)"
               className="character"
-              onClick={() => handleImageClick("ssjgokudbs")}
+              onClick={() => openCustomFullscreen(ssjgokudbsVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "ssjgokudbs" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={ssjgokudbsVid}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
           </div>
           )}
 
-          {/*SSG Goku (DBS)*/}
+          {/* SSG Goku (DBS) */}
           {isCharacterMatch("god goku") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728180986addtextcommjeznzmzmtk5oda.png"
               alt="SSG Goku (DBS)"
               className="character"
-              onClick={() => handleImageClick("ssggoku")}
+              onClick={() => openCustomFullscreen(ssggokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "ssggoku" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={ssggokuVid}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
           </div>
           )}
 
-          {/*SSB Goku (DBS)*/}
+          {/* SSB Goku (DBS) */}
           {isCharacterMatch("blue goku") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728183373addtextcommjiwmdawmtc1mzg.png"
               alt="SSB Goku (DBS)"
               className="character"
-              onClick={() => handleImageClick("ssbgoku")}
+              onClick={() => openCustomFullscreen(ssbgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "ssbgoku" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={ssbgokuVid}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
           </div>
           )}
 
-          {/*MUI Goku*/}
+          {/* MUI Goku */}
           {isCharacterMatch("mui goku") && (
           <div>
             <img
@@ -275,7 +243,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ3 Goku (GT)*/}
+          {/* SSJ3 Goku (GT) */}
           {isCharacterMatch("ssj3 goku gt") && (
           <div>
             <img
@@ -299,31 +267,20 @@ function App() {
           </div>
           )}
 
-          {/*SSJ4 Goku (GT)*/}
+          {/* SSJ4 Goku (GT) */}
           {isCharacterMatch("ssj4 goku") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726153958addtextcommtexmte2ndizode.png"
               alt="SSJ4 Goku (GT)"
               className="character"
-              onClick={() => handleImageClick("ssj4goku")}
+              onClick={() => openCustomFullscreen(ssj4gokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "ssj4goku" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={ssj4gokuVid}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
           </div>
           )}
 
-          {/*Great Ape Vegeta*/}
+          {/* Great Ape Vegeta */}
           {isCharacterMatch("great ape vegeta") && (
           <div>
             <img
@@ -347,7 +304,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Vegeta*/}
+          {/* Super Vegeta */}
           {isCharacterMatch("super vegeta") && (
           <div>
             <img
@@ -371,7 +328,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ2 Vegeta (END)*/}
+          {/* SSJ2 Vegeta (END) */}
           {isCharacterMatch("ssj2 vegeta end") && (
           <div>
             <img
@@ -395,7 +352,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ4 Vegeta (GT)*/}
+          {/* SSJ4 Vegeta (GT) */}
           {isCharacterMatch("ssj4 vegeta") && (
           <div>
             <img
@@ -419,7 +376,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ2 Teen Gohan*/}
+          {/* SSJ2 Teen Gohan */}
           {isCharacterMatch("ssj2 teen gohan") && (
           <div>
             <img
@@ -443,7 +400,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ2 Gohan*/}
+          {/* SSJ2 Gohan */}
           {isCharacterMatch("ssj2 adult gohan") && (
           <div>
             <img
@@ -467,7 +424,7 @@ function App() {
           </div>
           )}
 
-          {/*Great Saiyanman*/}
+          {/* Great Saiyanman */}
           {isCharacterMatch("great saiyanman") && (
           <div>
             <img
@@ -491,7 +448,7 @@ function App() {
           </div>
           )}
 
-          {/*Ultimate Gohan*/}
+          {/* Ultimate Gohan */}
           {isCharacterMatch("ultimate gohan") && (
           <div>
             <img
@@ -515,7 +472,7 @@ function App() {
           </div>
           )}
 
-          {/*Future Gohan*/}
+          {/* Future Gohan */}
           {isCharacterMatch("future gohan") && (
           <div>
             <img
@@ -539,7 +496,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Future Gohan*/}
+          {/* SSJ Future Gohan */}
           {isCharacterMatch("ssj future gohan") && (
           <div>
             <img
@@ -563,7 +520,7 @@ function App() {
           </div>
           )}
 
-          {/*Piccolo (END)*/}
+          {/* Piccolo (END) */}
           {isCharacterMatch("piccolo") && (
           <div>
             <img
@@ -587,7 +544,7 @@ function App() {
           </div>
           )}
 
-          {/*Yamcha*/}
+          {/* Yamcha */}
           {isCharacterMatch("yamcha") && (
           <div>
             <img
@@ -611,7 +568,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Trunks*/}
+          {/* Super Trunks */}
           {isCharacterMatch("super trunks") && (
           <div>
             <img
@@ -635,7 +592,7 @@ function App() {
           </div>
           )}
 
-          {/*Vegito*/}
+          {/* Vegito */}
           {isCharacterMatch("vegito") && (
           <div>
             <img
@@ -659,31 +616,20 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Vegito*/}
+          {/* SSJ Vegito */}
           {isCharacterMatch("super vegito") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1732026355addtextcommdkyndq4ndmxmg.png"
               alt="Vegito"
               className="character"
-              onClick={() => handleImageClick("vegitoss")}
+              onClick={() => openCustomFullscreen(vegitossVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "vegitoss" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={vegitossVid}
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
           </div>
           )}
 
-          {/*SSB Vegito*/}
+          {/* SSB Vegito */}
           {isCharacterMatch("blue vegito") && (
           <div>
             <img
@@ -707,7 +653,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Gogeta (Z)*/}
+          {/* SSJ Gogeta (Z) */}
           {isCharacterMatch("super gogeta z") && (
           <div>
             <img
@@ -731,7 +677,7 @@ function App() {
           </div>
           )}
 
-          {/*Gogeta (DBS)*/}
+          {/* Gogeta (DBS) */}
           {isCharacterMatch("gogeta") && (
           <div>
             <img
@@ -755,7 +701,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Gogeta (DBS)*/}
+          {/* SSJ Gogeta (DBS) */}
           {isCharacterMatch("ssj gogeta super") && (
           <div>
             <img
@@ -779,7 +725,7 @@ function App() {
           </div>
           )}
 
-          {/*SSB Gogeta (DBS)*/}
+          {/* SSB Gogeta (DBS) */}
           {isCharacterMatch("blue gogeta") && (
           <div>
             <img
@@ -803,31 +749,20 @@ function App() {
           </div>
           )}
 
-          {/*Gogeta SSJ4*/}
+          {/* Gogeta SSJ4 */}
           {isCharacterMatch("ssj4 gogeta") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727369681addtextcommti1mjewmzmxnta.png"
               alt="Gogeta4"
               className="character"
-              onClick={() => handleImageClick("gogeta4")}
+              onClick={() => openCustomFullscreen(gogeta4Vid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "gogeta4" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={gogeta4Vid}
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
           </div>
           )}
 
-          {/*Videl*/}
+          {/* Videl */}
           {isCharacterMatch("videl") && (
           <div>
             <img
@@ -851,7 +786,7 @@ function App() {
           </div>
           )}
 
-          {/*Master Roshi (FP)*/}
+          {/* Master Roshi (FP) */}
           {isCharacterMatch("master roshi max power") && (
           <div>
             <img
@@ -875,7 +810,7 @@ function App() {
           </div>
           )}
 
-          {/*2nd Form Frieza (Z)*/}
+          {/* 2nd Form Frieza (Z) */}
           {isCharacterMatch("frieza 2nd form") && (
           <div>
             <img
@@ -899,7 +834,7 @@ function App() {
           </div>
           )}
 
-          {/*Final Form Frieza (Z)*/}
+          {/* Final Form Frieza (Z) */}
           {isCharacterMatch("frieza 4th form") && (
           <div>
             <img
@@ -923,7 +858,7 @@ function App() {
           </div>
           )}
 
-          {/*Full Power Frieza (Z)*/}
+          {/* Full Power Frieza (Z) */}
           {isCharacterMatch("frieza full power") && (
           <div>
             <img
@@ -947,7 +882,7 @@ function App() {
           </div>
           )}
 
-          {/*Final Form Frieza (DBS)*/}
+          {/* Final Form Frieza (DBS) */}
           {isCharacterMatch("frieza super") && (
           <div>
             <img
@@ -971,7 +906,7 @@ function App() {
           </div>
           )}
 
-          {/*Golden Frieza*/}
+          {/* Golden Frieza */}
           {isCharacterMatch("golden frieza") && (
           <div>
             <img
@@ -995,7 +930,7 @@ function App() {
           </div>
           )}
 
-          {/*Cell 2nd Form*/}
+          {/* Cell 2nd Form */}
           {isCharacterMatch("cell 2nd form") && (
           <div>
             <img
@@ -1019,7 +954,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Perfect Cell*/}
+          {/* Super Perfect Cell */}
           {isCharacterMatch("super perfect cell") && (
           <div>
             <img
@@ -1043,7 +978,7 @@ function App() {
           </div>
           )}
 
-          {/*Majin Buu*/}
+          {/* Majin Buu */}
           {isCharacterMatch("majin buu") && (
           <div>
             <img
@@ -1067,7 +1002,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Buu*/}
+          {/* Super Buu */}
           {isCharacterMatch("super buu") && (
           <div>
             <img
@@ -1091,7 +1026,7 @@ function App() {
           </div>
           )}
 
-          {/*Buuhan*/}
+          {/* Buuhan */}
           {isCharacterMatch("buuhan") && (
           <div>
             <img
@@ -1115,7 +1050,7 @@ function App() {
           </div>
           )}
 
-          {/*Yajirobe*/}
+          {/* Yajirobe */}
           {isCharacterMatch("yajirobe") && (
           <div>
             <img
@@ -1139,31 +1074,20 @@ function App() {
           </div>
           )}
 
-          {/*Bardock*/}
+          {/* Bardock */}
           {isCharacterMatch("bardock") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728183373addtextcommji1nti3mja0njc.png"
               alt="Bardock"
               className="character"
-              onClick={() => handleImageClick("bardock")}
+              onClick={() => openCustomFullscreen(bardockVid)}
               style={{ cursor: "pointer" }}
             />
-            {visibleVideo === "bardock" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={bardockVid}
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )}
           </div>
           )}
 
-          {/*Raditz*/}
+          {/* Raditz */}
           {isCharacterMatch("raditz") && (
           <div>
             <img
@@ -1187,7 +1111,7 @@ function App() {
           </div>
           )}
 
-          {/*Nappa*/}
+          {/* Nappa */}
           {isCharacterMatch("nappa") && (
           <div>
             <img
@@ -1211,7 +1135,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Zarbon*/}
+          {/* Super Zarbon */}
           {isCharacterMatch("super zarbon") && (
           <div>
             <img
@@ -1235,7 +1159,7 @@ function App() {
           </div>
           )}
 
-          {/*Dodoria*/}
+          {/* Dodoria */}
           {isCharacterMatch("dodoria") && (
           <div>
             <img
@@ -1259,7 +1183,7 @@ function App() {
           </div>
           )}
 
-          {/*Captain Ginyu*/}
+          {/* Captain Ginyu */}
           {isCharacterMatch("ginyu") && (
           <div>
             <img
@@ -1283,7 +1207,7 @@ function App() {
           </div>
           )}
 
-          {/*Recoome*/}
+          {/* Recoome */}
           {isCharacterMatch("recoome") && (
           <div>
             <img
@@ -1307,7 +1231,7 @@ function App() {
           </div>
           )}
 
-          {/*Burter*/}
+          {/* Burter */}
           {isCharacterMatch("burter") && (
           <div>
             <img
@@ -1331,7 +1255,7 @@ function App() {
           </div>
           )}
 
-          {/*Jeice*/}
+          {/* Jeice */}
           {isCharacterMatch("jeice") && (
           <div>
             <img
@@ -1355,7 +1279,7 @@ function App() {
           </div>
           )}
 
-          {/*Guldo*/}
+          {/* Guldo */}
           {isCharacterMatch("guldo") && (
           <div>
             <img
@@ -1379,7 +1303,7 @@ function App() {
           </div>
           )}
 
-          {/*King Cold*/}
+          {/* King Cold */}
           {isCharacterMatch("king cold") && (
           <div>
             <img
@@ -1403,7 +1327,7 @@ function App() {
           </div>
           )}
 
-          {/*Android 16*/}
+          {/* Android 16 */}
           {isCharacterMatch("android 16") && (
           <div>
             <img
@@ -1427,7 +1351,7 @@ function App() {
           </div>
           )}
 
-          {/*Android 17 (Z)*/}
+          {/* Android 17 (Z) */}
           {isCharacterMatch("android 17 z") && (
           <div>
             <img
@@ -1451,7 +1375,7 @@ function App() {
           </div>
           )}
 
-          {/*Android 17 (DBS)*/}
+          {/* Android 17 (DBS) */}
           {isCharacterMatch("android 17 super") && (
           <div>
             <img
@@ -1475,7 +1399,7 @@ function App() {
           </div>
           )}
 
-          {/*Android 18*/}
+          {/* Android 18 */}
           {isCharacterMatch("android 18") && (
           <div>
             <img
@@ -1499,7 +1423,7 @@ function App() {
           </div>
           )}
 
-          {/*Android 19*/}
+          {/* Android 19 */}
           {isCharacterMatch("android 19") && (
           <div>
             <img
@@ -1523,7 +1447,7 @@ function App() {
           </div>
           )}
 
-          {/*Dabura*/}
+          {/* Dabura */}
           {isCharacterMatch("dabura") && (
           <div>
             <img
@@ -1547,7 +1471,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Broly (Z)*/}
+          {/* SSJ Broly (Z) */}
           {isCharacterMatch("ssj broly z") && (
           <div>
             <img
@@ -1571,7 +1495,7 @@ function App() {
           </div>
           )}
 
-          {/*LSSJ Broly (Z)*/}
+          {/* LSSJ Broly (Z) */}
           {isCharacterMatch("lssj broly z") && (
           <div>
             <img
@@ -1595,7 +1519,7 @@ function App() {
           </div>
           )}
 
-          {/*Broly (DBS)*/}
+          {/* Broly (DBS) */}
           {isCharacterMatch("base broly super") && (
           <div>
             <img
@@ -1619,7 +1543,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Broly (DBS)*/}
+          {/* SSJ Broly (DBS) */}
           {isCharacterMatch("ssj broly super") && (
           <div>
             <img
@@ -1643,7 +1567,7 @@ function App() {
           </div>
           )}
 
-          {/*LSSJ Broly (DBS)*/}
+          {/* LSSJ Broly (DBS) */}
           {isCharacterMatch("ssj broly full power super") && (
           <div>
             <img
@@ -1667,7 +1591,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Garlic Jr.*/}
+          {/* Super Garlic Jr. */}
           {isCharacterMatch("super garlic jr.") && (
           <div>
             <img
@@ -1691,7 +1615,7 @@ function App() {
           </div>
           )}
 
-          {/*Dr. Wheelo*/}
+          {/* Dr. Wheelo */}
           {isCharacterMatch("dr. wheelo") && (
           <div>
             <img
@@ -1715,7 +1639,7 @@ function App() {
           </div>
           )}
 
-          {/*Lord Slug*/}
+          {/* Lord Slug */}
           {isCharacterMatch("lord slug") && (
           <div>
             <img
@@ -1739,7 +1663,7 @@ function App() {
           </div>
           )}
 
-          {/*Lord Slug (Giant)*/}
+          {/* Lord Slug (Giant) */}
           {isCharacterMatch("giant lord slug") && (
           <div>
             <img
@@ -1763,7 +1687,7 @@ function App() {
           </div>
           )}
 
-          {/*Final Form Cooler*/}
+          {/* Final Form Cooler */}
           {isCharacterMatch("final form cooler") && (
           <div>
             <img
@@ -1787,7 +1711,7 @@ function App() {
           </div>
           )}
 
-          {/*Metal Cooler*/}
+          {/* Metal Cooler */}
           {isCharacterMatch("metal cooler") && (
           <div>
             <img
@@ -1811,7 +1735,7 @@ function App() {
           </div>
           )}
 
-          {/*Android 13 (Fused)*/}
+          {/* Android 13 (Fused) */}
           {isCharacterMatch("fusion android 13") && (
           <div>
             <img
@@ -1835,7 +1759,7 @@ function App() {
           </div>
           )}
 
-          {/*Bojack*/}
+          {/* Bojack */}
           {isCharacterMatch("bojack") && (
           <div>
             <img
@@ -1859,7 +1783,7 @@ function App() {
           </div>
           )}
 
-          {/*Bojack (Full Power)*/}
+          {/* Bojack (Full Power) */}
           {isCharacterMatch("full power bojack") && (
           <div>
             <img
@@ -1883,7 +1807,7 @@ function App() {
           </div>
           )}
 
-          {/*Janemba*/}
+          {/* Janemba */}
           {isCharacterMatch("janemba") && (
           <div>
             <img
@@ -1907,7 +1831,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Janemba*/}
+          {/* Super Janemba */}
           {isCharacterMatch("super janemba") && (
           <div>
             <img
@@ -1931,7 +1855,7 @@ function App() {
           </div>
           )}
 
-          {/*Tapion*/}
+          {/* Tapion */}
           {isCharacterMatch("tapion") && (
           <div>
             <img
@@ -1955,7 +1879,7 @@ function App() {
           </div>
           )}
 
-          {/*Hirudegarn*/}
+          {/* Hirudegarn */}
           {isCharacterMatch("hirudegarn") && (
           <div>
             <img
@@ -1979,7 +1903,7 @@ function App() {
           </div>
           )}
 
-          {/*Super Baby 2*/}
+          {/* Super Baby 2 */}
           {isCharacterMatch("super baby 2") && (
           <div>
             <img
@@ -2003,7 +1927,7 @@ function App() {
           </div>
           )}
 
-          {/*Great Ape Baby*/}
+          {/* Great Ape Baby */}
           {isCharacterMatch("great ape baby") && (
           <div>
             <img
@@ -2027,7 +1951,7 @@ function App() {
           </div>
           )}
 
-          {/*Omega Shenron*/}
+          {/* Omega Shenron */}
           {isCharacterMatch("omega shenron") && (
           <div>
             <img
@@ -2051,7 +1975,7 @@ function App() {
           </div>
           )}
 
-          {/*Spopovich*/}
+          {/* Spopovich */}
           {isCharacterMatch("spopovich") && (
           <div>
             <img
@@ -2075,7 +1999,7 @@ function App() {
           </div>
           )}
 
-          {/*Beerus*/}
+          {/* Beerus */}
           {isCharacterMatch("beerus") && (
           <div>
             <img
@@ -2099,7 +2023,7 @@ function App() {
           </div>
           )}
 
-          {/*SSR Goku Black*/}
+          {/* SSR Goku Black */}
           {isCharacterMatch("ssj rose goku black") && (
           <div>
             <img
@@ -2123,7 +2047,7 @@ function App() {
           </div>
           )}
 
-          {/*Zamasu*/}
+          {/* Zamasu */}
           {isCharacterMatch("zamasu") && (
           <div>
             <img
@@ -2147,7 +2071,7 @@ function App() {
           </div>
           )}
 
-          {/*Fused Zamasu*/}
+          {/* Fused Zamasu */}
           {isCharacterMatch("fused zamasu") && (
           <div>
             <img
@@ -2171,7 +2095,7 @@ function App() {
           </div>
           )}
 
-          {/*Fused Zamasu (Corrupted)*/}
+          {/* Fused Zamasu (Corrupted) */}
           {isCharacterMatch("corrupted fused zamasu") && (
           <div>
             <img
@@ -2195,7 +2119,7 @@ function App() {
           </div>
           )}
 
-          {/*Hit*/}
+          {/* Hit */}
           {isCharacterMatch("hit") && (
           <div>
             <img
@@ -2219,7 +2143,7 @@ function App() {
           </div>
           )}
 
-          {/*Frost*/}
+          {/* Frost */}
           {isCharacterMatch("frost") && (
           <div>
             <img
@@ -2243,7 +2167,7 @@ function App() {
           </div>
           )}
 
-          {/*Caulifla*/}
+          {/* Caulifla */}
           {isCharacterMatch("caulifla") && (
           <div>
             <img
@@ -2267,7 +2191,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ2 Caulifla*/}
+          {/* SSJ2 Caulifla */}
           {isCharacterMatch("ssj2 caulifla") && (
           <div>
             <img
@@ -2291,7 +2215,7 @@ function App() {
           </div>
           )}
 
-          {/*Berserker Kale*/}
+          {/* Berserker Kale */}
           {isCharacterMatch("ssj kale berserker") && (
           <div>
             <img
@@ -2315,7 +2239,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Kale*/}
+          {/* SSJ Kale */}
           {isCharacterMatch("ssj kale") && (
           <div>
             <img
@@ -2339,7 +2263,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ Kefla*/}
+          {/* SSJ Kefla */}
           {isCharacterMatch("ssj kefla") && (
           <div>
             <img
@@ -2363,7 +2287,7 @@ function App() {
           </div>
           )}
 
-          {/*SSJ2 Kefla*/}
+          {/* SSJ2 Kefla */}
           {isCharacterMatch("ssj2 kefla") && (
           <div>
             <img
@@ -2387,7 +2311,7 @@ function App() {
           </div>
           )}
 
-          {/*Jiren*/}
+          {/* Jiren */}
           {isCharacterMatch("jiren") && (
           <div>
             <img
@@ -2411,7 +2335,7 @@ function App() {
           </div>
           )}
 
-          {/*Jiren (Full Power)*/}
+          {/* Jiren (Full Power) */}
           {isCharacterMatch("jiren full power") && (
           <div>
             <img
@@ -2435,7 +2359,7 @@ function App() {
           </div>
           )}
 
-          {/*Toppo*/}
+          {/* Toppo */}
           {isCharacterMatch("toppo") && (
           <div>
             <img
@@ -2459,7 +2383,7 @@ function App() {
           </div>
           )}
 
-          {/*Toppo (God of Destruction)*/}
+          {/* Toppo (God of Destruction) */}
           {isCharacterMatch("god toppo") && (
           <div>
             <img
@@ -2483,7 +2407,7 @@ function App() {
           </div>
           )}
 
-          {/*Bergamo*/}
+          {/* Bergamo */}
           {isCharacterMatch("bergamo") && (
           <div>
             <img
@@ -2507,7 +2431,7 @@ function App() {
           </div>
           )}
 
-          {/*Ribrianne*/}
+          {/* Ribrianne */}
           {isCharacterMatch("ribrianne") && (
           <div>
             <img
@@ -2531,7 +2455,7 @@ function App() {
           </div>
           )}
 
-          {/*Kakunsa*/}
+          {/* Kakunsa */}
           {isCharacterMatch("kakunsa") && (
           <div>
             <img
@@ -2555,7 +2479,7 @@ function App() {
           </div>
           )}
 
-          {/*Anilaza*/}
+          {/* Anilaza */}
           {isCharacterMatch("anilaza") && (
           <div>
             <img
