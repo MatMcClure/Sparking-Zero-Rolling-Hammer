@@ -138,6 +138,52 @@ body {
   filter: saturate(80%);
 }
 
+.App.dark .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    margin-right: 20px;
+    position: absolute; /* Place the button at the top-left corner */
+    top: 20px;
+    left: 10px;
+  }
+  
+.App.dark .hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+.App.light .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    margin-right: 20px;
+    position: absolute; /* Place the button at the top-left corner */
+    top: 20px;
+    left: 10px;
+  }
+  
+.App.light .hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #121212;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
 .Logo {
   width: 600px;
   height: auto;
@@ -207,4 +253,40 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 100%; /* Ensure the container doesn't exceed screen width */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden off-screen initially */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0; /* Slide into view */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar nav ul li:hover {
+  color: #ff9800; /* Highlight on hover */
+}
+
+.sidebar.open .hamburger {
+  display: none; /* Just in case, ensures the hamburger is hidden */
 }

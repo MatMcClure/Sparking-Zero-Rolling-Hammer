@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import logo from './images/sparking-banner.png';
+import SuperCounters from './pages/Supercounter';
 import ssjgokumidVid from './videos/ssjgokumid-turn-around.mp4';
 import ssjgokuendVid from './videos/ssjgokuend-turn-around.mp4';
 import ssj2gokuendVid from './videos/ssj2gokuend-turn-around.mp4';
@@ -13,6 +14,50 @@ import gogeta4Vid from './videos/gogeta4-turn-around.mp4';
 import bardockVid from './videos/bardock-turn-around.mp4';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState("home");
+  const sidebarRef = useRef(null); // Ref for the sidebar
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
+  
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape" && isSidebarOpen) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    // Attach the event listener
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isSidebarOpen]);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (
+        isSidebarOpen &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target)
+      ) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    // Attach the event listener
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isSidebarOpen]);
+
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   const toggleTheme = () => {
@@ -30,6 +75,11 @@ function App() {
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value); // Update search query in real-time
+  };
+
+  const handleSidebarClick = (page) => {
+    setCurrentPage(page); // Update the current page to show
+    setIsSidebarOpen(false); // Close the sidebar after page change
   };
 
   const handleImageClick = (character) => {
@@ -78,6 +128,7 @@ function App() {
       <div className={`App ${theme}`}> {/* Dynamically apply theme class */}
       <header className="App-header">
         <img src={logo} alt="Logo" className="Logo" />
+        {currentPage !== "super-counters" && (
           <input
           type="text"
           value={searchQuery}
@@ -85,10 +136,44 @@ function App() {
           placeholder="Search for a character"
           className="search-bar"
           />
-      <button className="theme-toggle" onClick={toggleTheme}> {/* Theme toggle */}
-        {theme === "dark" ? "☀️" : "🌙"}
-      </button>
+        )}
+
+        {/* Hamburger button */}
+        {!isSidebarOpen && (
+        <button className="hamburger" onClick={toggleSidebar}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+        )}
       </header>
+
+      <div 
+        ref={sidebarRef} // Attach ref to the sidebar
+        className={`sidebar ${isSidebarOpen ? "open" : ""}`}
+      >
+        <nav>
+          <ul>
+            <li onClick={() => handleSidebarClick("rolling-hammer")}>Rolling Hammers</li>
+            <li onClick={() => handleSidebarClick("super-counters")}>Super Counters</li>
+            <button className="theme-toggle" onClick={toggleTheme}> {/* Theme toggle */}
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
+          </ul>
+        </nav>
+      </div>
+
+      {currentPage === "home" && (
+        <div className="App-home">
+          {/* Place character display here */}
+        </div>
+      )}
+
+      {currentPage === "super-counters" && (
+        <div className="App-super-counters">
+          <SuperCounters />
+        </div>
+      )}
       
       <div className="social-icons">
         <a href="https://www.twitch.tv/vixzo" target="_blank" rel="noopener noreferrer">
@@ -114,6 +199,7 @@ function App() {
         </a>
       </div>
       <div className="App-main">
+      {currentPage !== "super-counters" && (
         <div className="character-grid">
 
         {/* All characters formatted the same */}
@@ -2502,8 +2588,8 @@ function App() {
             )} */}
           </div>
           )}
-
         </div>
+        )}
       </div>
     </div>
   );
