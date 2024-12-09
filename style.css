@@ -1,0 +1,334 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App.dark body {
+  background-color: #121212;
+  color: white;
+}
+
+.App.light body {
+  background-color: white;
+  color: #121212;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  /*background: black;*/
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (orientation: portrait) {
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    width: 600px;
+    height: 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    padding-left: 1%
+  }
+
+  .character-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -50px;
+  }
+}
+
+@media (orientation: landscape) {
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    width: 1000px;
+    height: 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    padding-left: 1%
+  }
+
+  .character-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -50px;
+  }
+}
+
+.App-header {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw; /* Prevents content from exceeding the viewport width */
+  box-sizing: border-box;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.App.light {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.App.dark .character {
+  border-color: white;
+}
+
+.App.light .character {
+  border-color: black;
+}
+
+.App.dark .icon {
+  filter: invert(100%) saturate(0%) brightness(500%);
+}
+
+.App.light .icon {
+  filter: saturate(80%);
+}
+
+.App.dark .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    margin-right: 20px;
+    position: absolute; /* Place the button at the top-left corner */
+    top: 20px;
+    left: 10px;
+  }
+  
+.App.dark .hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+.App.light .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    margin-right: 20px;
+    position: absolute; /* Place the button at the top-left corner */
+    top: 20px;
+    left: 10px;
+  }
+  
+.App.light .hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #121212;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+.Logo {
+  width: 600px;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+
+.Headers {
+  text-decoration: underline;
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  font-size: 20px; 
+  font-weight: bold; 
+}
+
+.character {
+  width: 150px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10%;
+  border: solid;
+  /*border-color: rgb(87, 87, 87);*/
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  border-radius: 5px; 
+  height: 10px;
+}
+
+.icon{
+  height: 50px;
+  width: 50px;
+  filter: invert(100%) saturate(0%) brightness(500%);
+}
+
+.theme-toggle {
+  position: absolute; /* Place the button at the top-left corner */
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px; /* Adjust icon size */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%; /* Ensure the container doesn't exceed screen width */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden off-screen initially */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0; /* Slide into view */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar nav ul li:hover {
+  color: #ff9800; /* Highlight on hover */
+}
+
+.sidebar.open .hamburger {
+  display: none; /* Just in case, ensures the hamburger is hidden */
+}
+
+.App.dark .superCounterVid {
+  border-color: white;
+}
+
+.App.light .superCounterVid {
+  border-color: #121212;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* Two columns for two images */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.superCounterOne, .superCounterTwo, .superCounterThree {
+  width: 400px; /* Adjust image size */
+  height: auto;
+}
+
+.App.dark .superCounterOne {
+  border-radius: 10%;
+  border: solid;
+  border-color: white;
+}
+
+.App.dark .superCounterTwo {
+  border-radius: 10%;
+  border: solid;
+  border-color: white;
+}
+
+.App.light .superCounterOne, .superCounterTwo {
+  border-radius: 10%;
+  border: solid;
+  border-color: #121212
+}
