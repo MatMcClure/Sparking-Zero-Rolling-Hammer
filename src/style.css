@@ -290,3 +290,45 @@ body {
 .sidebar.open .hamburger {
   display: none; /* Just in case, ensures the hamburger is hidden */
 }
+
+.App.dark .superCounterVid {
+  border-color: white;
+}
+
+.App.light .superCounterVid {
+  border-color: #121212;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* Two columns for two images */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.superCounterOne, .superCounterTwo, .superCounterThree {
+  width: 400px; /* Adjust image size */
+  height: auto;
+}
+
+.App.dark .superCounterOne {
+  border-radius: 10%;
+  border: solid;
+  border-color: white;
+}
+
+.App.dark .superCounterTwo {
+  border-radius: 10%;
+  border: solid;
+  border-color: white;
+}
+
+.App.light .superCounterOne, .superCounterTwo {
+  border-radius: 10%;
+  border: solid;
+  border-color: #121212
+}
