@@ -32,6 +32,14 @@ import dodoriaVid from './videos/dodoria-turn-around.mp4';
 import guldoVid from './videos/guldo-turn-around.mp4';
 import android16Vid from './videos/android16-turn-around.mp4';
 import android19Vid from './videos/android19-turn-around.mp4';
+import daburaVid from './videos/dabura-turn-around.mp4';
+import ssjbrolyVid from './videos/ssjbroly-turn-around.mp4';
+import lssjbrolyVid from './videos/lssjbroly-turn-around.mp4';
+import brolydbsVid from './videos/brolydbs-turn-around.mp4';
+import lssjbrolydbsVid from './videos/lssjbrolydbs-turn-around.mp4';
+import garlicVid from './videos/garlic-turn-around.mp4';
+import ffcoolerVid from './videos/ffcooler-turn-around.mp4';
+import android13Vid from './videos/android13-turn-around.mp4';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -91,7 +99,6 @@ function App() {
   }, [theme]);
 
   const [searchQuery, setSearchQuery] = useState(""); // Track the search query
-  const [setVisibleVideo] = useState(""); // Track which video is visible
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value); // Update search query in real-time
@@ -100,10 +107,6 @@ function App() {
   const handleSidebarClick = (page) => {
     setCurrentPage(page); // Update the current page to show
     setIsSidebarOpen(false); // Close the sidebar after page change
-  };
-
-  const handleImageClick = (character) => {
-    setVisibleVideo((prev) => (prev === character ? null : character));
   };
 
   const isCharacterMatch = (character) => {
@@ -361,20 +364,9 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727277647addtextcommtexnjm5mje1nta.png"
               alt="Great Ape Vegeta"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -424,20 +416,9 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728315291addtextcommtezndi0mzm3ng.png"
               alt="Bardock"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -472,22 +453,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726983094addtextcommdeyotm5odgxma.png"
-              alt="Bardock"
+              alt="Ultimate Gohan"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -496,22 +466,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728191270addtextcommdewnzm2mjeyndq.png"
-              alt="Bardock"
+              alt="Future Gohan"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -520,22 +479,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728190969addtextcommda1mze2mjexnty.png"
-              alt="Bardock"
+              alt="SSJ Future Gohan"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -544,22 +492,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727117373addtextcommte1njm1ndcyng.png"
-              alt="Bardock"
+              alt="Piccolo (END)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -568,22 +505,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtqyndu5ndezmda.png"
-              alt="Bardock"
+              alt="Yamcha"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -644,22 +570,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727656432addtextcommjazmze5njgxnzg.png"
-              alt="Vegito"
+              alt="SSJ Gogeta (Z)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -668,22 +583,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727373736addtextcommtm1odawnde3nzi.png"
-              alt="Vegito"
+              alt="Gogeta (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -692,22 +596,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727296731addtextcommtyznde2mjq1mta.png"
-              alt="Vegito"
+              alt="SSJ Gogeta (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -716,22 +609,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728183373addtextcommjiwnzi0mtc1odc.png"
-              alt="Vegito"
+              alt="SSB Gogeta (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -779,22 +661,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726981661addtextcommda1nte2njcwndq.png"
-              alt="Gogeta4"
+              alt="2nd Form Frieza (Z)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -803,22 +674,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727117373addtextcommtm1nzuznzi3oti.png"
-              alt="Gogeta4"
+              alt="Final Form Frieza (Z)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -840,22 +700,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726514840addtextcommtuynzaxndmzmq.png"
-              alt="Gogeta4"
+              alt="Final Form Frieza (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -864,22 +713,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmymtq3ndm4nji.png"
-              alt="Gogeta4"
+              alt="Golden Frieza"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -888,22 +726,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727022174addtextcommtiymje5nziwmde.png"
-              alt="Gogeta4"
+              alt="Cell 2nd Form"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -912,22 +739,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728253978addtextcommtgzmjm4mju3ody.png"
-              alt="Gogeta4"
+              alt="Super Perfect Cell"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -949,22 +765,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727969783addtextcommteznte4mzewody.png"
-              alt="Gogeta4"
+              alt="Super Buu"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -973,22 +778,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727121105addtextcommtuznzq4njy4mg.png"
-              alt=""
+              alt="Buuhan"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -997,22 +791,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmxnzu5ndm4mzq.png"
-              alt=""
+              alt="Yajirobe"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1034,22 +817,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmymdm1ndm4ntm.png"
-              alt=""
+              alt="Raditz"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1071,22 +843,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728459768addtextcommdm0mda5mtczmzi.png"
-              alt=""
+              alt="Zarbon"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1108,22 +869,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti1mze3ndaznzq.png"
-              alt=""
+              alt="Captain Ginyu"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1132,22 +882,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti1mjq0ndaznjc.png"
-              alt=""
+              alt="Recoome"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1156,22 +895,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti0ndizndayote.png"
-              alt=""
+              alt="Burter"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1180,22 +908,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti0mtaxndaynjc.png"
-              alt=""
+              alt="Jeice"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1217,22 +934,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtqxmtazndexnti.png"
-              alt=""
+              alt="King Cold"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1254,22 +960,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728249232addtextcommtcxmje2mjuznzy.png"
-              alt=""
+              alt="Android 17 (Z)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1278,22 +973,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726369739addtextcommji1nta4ntg4mjm.png"
-              alt=""
+              alt="Android 17 (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1302,22 +986,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtizotu5ndayntu.png"
-              alt=""
+              alt="Android 18"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1339,22 +1012,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmzntq4ndm5ote.png"
-              alt=""
+              alt="Dabura"
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(daburaVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1363,22 +1025,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728250725addtextcommtczodeymju1mdy.png"
-              alt=""
+              alt="SSJ Broly (Z)"
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(ssjbrolyVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1387,22 +1038,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728250201addtextcommtcynji5mju0ndi.png"
-              alt=""
+              alt="LSSJ Broly (Z)"
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(lssjbrolyVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1411,22 +1051,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti0otq5ndaznti.png"
-              alt=""
+              alt="Broly (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(brolydbsVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1435,22 +1064,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726354716addtextcommtg1nda1ntcwntq.png"
-              alt=""
+              alt="SSJ Broly (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1459,22 +1077,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727976137addtextcommtmymdq1mze0mta.png"
-              alt=""
+              alt="LSSJ Broly (DBS)"
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(lssjbrolydbsVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1483,22 +1090,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728252631addtextcommtgxmda0mju2nzy.png"
-              alt=""
+              alt="Super Garlic Jr."
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(garlicVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1507,22 +1103,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759066addtextcommta1odi2mzc5ntq.png"
-              alt=""
+              alt="Dr. Wheelo"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1531,22 +1116,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726764103addtextcommtiwotu4nde2mde.png"
-              alt=""
+              alt="Lord Slug"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1555,22 +1129,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728457411addtextcommdmwmdq2mtixndg.png"
-              alt=""
+              alt="Lord Slug (Giant)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1579,22 +1142,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759067addtextcommtewndm3mzgwmtq.png"
-              alt=""
+              alt="Final Form Cooler"
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(ffcoolerVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1603,22 +1155,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759067addtextcommtewmtuymzc5odc.png"
-              alt=""
+              alt="Metal Cooler"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1627,22 +1168,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727654168addtextcommtk1ntqxnjc5odi.png"
-              alt=""
+              alt="Android 13 (Fused)"
               className="character"
-              onClick={() => handleImageClick("")}
+              onClick={() => openCustomFullscreen(android13Vid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1651,22 +1181,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759066addtextcommta1mza0mzc4otq.png"
-              alt=""
+              alt="Bojack"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1675,22 +1194,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727192635addtextcommtezmzu5mtu2ndk.png"
-              alt=""
+              alt="Bojack (Full Power)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1699,22 +1207,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726807458addtextcommda0mzq2ndc1mzm.png"
-              alt=""
+              alt="Janemba"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1723,22 +1220,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759066addtextcommta0otm3mzc4ntc.png"
-              alt=""
+              alt="Super Janemba"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1747,22 +1233,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759066addtextcommta1mduymzc4nza.png"
-              alt=""
+              alt="Tapion"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1771,22 +1246,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759066addtextcommta1mtm2mzc4oda.png"
-              alt=""
+              alt="Hirudegarn"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1795,22 +1259,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727123172addtextcommtyyntu0ntmyoq.png"
-              alt=""
+              alt="Super Baby 2"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1819,22 +1272,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727277647addtextcommtewodiwmje0otq.png"
-              alt=""
+              alt="Great Ape Baby"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1843,22 +1285,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727667805addtextcommjmzmdu1njkynzq.png"
-              alt=""
+              alt="Omega Shenron"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1867,22 +1298,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmznte4ndm5nzk.png"
-              alt=""
+              alt="Spopovich"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1891,22 +1311,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmzode1ndqwmtk.png"
-              alt=""
+              alt="Beerus"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1915,22 +1324,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728272124addtextcommjmzndu3mjk5nzq.png"
-              alt=""
+              alt="SSR Goku Black"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1939,22 +1337,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmxotqwndm4ndk.png"
-              alt=""
+              alt="Zamasu"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1963,22 +1350,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmynje5ndm5mty.png"
-              alt=""
+              alt="Fused Zamasu"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -1987,22 +1363,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728449886addtextcommda1nzexmtezodm.png"
-              alt=""
+              alt="Fused Zamasu (Corrupted)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2011,22 +1376,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727123729addtextcommtyzmzq3ntm3mq.png"
-              alt=""
+              alt="Hit"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2035,22 +1389,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759067addtextcommtexmza1mzgxntq.png"
-              alt=""
+              alt="Frost"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2059,22 +1402,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727471699addtextcommtcxndmzmtuzotk.png"
-              alt=""
+              alt="Caulifla"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2083,22 +1415,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728701617addtextcommji1mze5ntaymzi.png"
-              alt=""
+              alt="SSJ2 Caulifla"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2107,22 +1428,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727117953addtextcommtq1odq4ndy4oq.png"
-              alt=""
+              alt="Berseker Kale"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2131,22 +1441,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmxmdi2ndm3nty.png"
-              alt=""
+              alt="SSJ Kale"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2155,22 +1454,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728452377addtextcommtmwnze2ndm3mzm.png"
-              alt=""
+              alt="SSJ Kefla"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2179,22 +1467,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728263486addtextcommjexmdeymjg5ndk.png"
-              alt=""
+              alt="SSJ2 Kefla"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2203,22 +1480,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727377501addtextcommtq1nzqxmzqwndy.png"
-              alt=""
+              alt="Jiren"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2227,22 +1493,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727366525addtextcommte0nta5nda0njq.png"
-              alt=""
+              alt="Jiren (Full Power)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2251,22 +1506,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti0mte5ndaynjk.png"
-              alt=""
+              alt="Toppo"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2275,22 +1519,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759067addtextcommtexmte2mzgxndi.png"
-              alt=""
+              alt="Toppo (God of Destruction)"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2299,22 +1532,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728183373addtextcommjixmja5mtc2mdq.png"
-              alt=""
+              alt="Bergamo"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2323,22 +1545,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmzmzi0ndm5ntu.png"
-              alt=""
+              alt="Ribrianne"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2347,22 +1558,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti0njaxndazmjm.png"
-              alt=""
+              alt="Kakunsa"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
 
@@ -2371,22 +1571,11 @@ function App() {
           <div>
             <img
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti1mtmxndaznjm.png"
-              alt=""
+              alt="Anilaza"
               className="character"
-              onClick={() => handleImageClick("")}
+              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
               style={{ cursor: "pointer" }}
             />
-            {/*{visibleVideo === "" && (
-              <div className="video-container" style={{ marginTop: "20px" }}>
-                <video
-                  src={}    
-                  controls
-                  width="600"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                </video>
-              </div>
-            )} */}
           </div>
           )}
         </div>
