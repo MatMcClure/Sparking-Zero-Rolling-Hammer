@@ -30,11 +30,14 @@ import bluegogetaVid from './videos/bluegogeta-turn-around.mp4';
 import gogeta4Vid from './videos/gogeta4-turn-around.mp4';
 import videlVid from './videos/videl-turn-around.mp4'; 
 import roshiVid from './videos/roshi-turn-around.mp4';
+import secondformfriezaVid from './videos/secondformfrieza-turn-around.mp4';
 import fpfriezaVid from './videos/fpfrieza-turn-around.mp4';
+import goldenfriezaVid from './videos/goldenfrieza-turn-around.mp4';
 import majinbuuVid from './videos/majinbuu-turn-around.mp4';
 import bardockVid from './videos/bardock-turn-around.mp4';
 import nappaVid from './videos/nappa-turn-around.mp4';
 import dodoriaVid from './videos/dodoria-turn-around.mp4';
+import kingcoldVid from './videos/kingcold-turn-around.mp4';
 import guldoVid from './videos/guldo-turn-around.mp4';
 import android16Vid from './videos/android16-turn-around.mp4';
 import android19Vid from './videos/android19-turn-around.mp4';
@@ -42,16 +45,29 @@ import daburaVid from './videos/dabura-turn-around.mp4';
 import ssjbrolyVid from './videos/ssjbroly-turn-around.mp4';
 import lssjbrolyVid from './videos/lssjbroly-turn-around.mp4';
 import brolydbsVid from './videos/brolydbs-turn-around.mp4';
+import ssjbrolydbsVid from './videos/ssjbrolydbs-turn-around.mp4';
 import lssjbrolydbsVid from './videos/lssjbrolydbs-turn-around.mp4';
 import garlicVid from './videos/garlic-turn-around.mp4';
+import drwheeloVid from './videos/drwheelo-turn-around.mp4';
 import ffcoolerVid from './videos/ffcooler-turn-around.mp4';
+import bojackVid from './videos/bojack-turn-around.mp4';
 import android13Vid from './videos/android13-turn-around.mp4';
+import superbaby2Vid from './videos/superbaby2-turn-around.mp4';
 import greatapebabyVid from './videos/greatapebaby-turn-around.mp4';
+import spopovichVid from './videos/spopovich-turn-around.mp4';
+import ssrgokublackVid from './videos/ssrgokublack-turn-around.mp4';
+import cozamasuVid from './videos/cozamasu-turn-around.mp4';
 import shenronVid from './videos/shenron-turn-around.mp4';
 import beerusVid from './videos/beerus-turn-around.mp4';
+import hitVid from './videos/hit-turn-around.mp4';
+import cauliflaVid from './videos/caulifla-turn-around.mp4';
+import ssj2cauliflaVid from './videos/ssj2caulifla-turn-around.mp4';
+import bskaleVid from './videos/bskale-turn-around.mp4';
 import ssjkaleVid from './videos/ssjkale-turn-around.mp4';
 import ssj2keflaVid from './videos/ssj2kefla-turn-around.mp4';
 import toppoVid from './videos/toppo-turn-around.mp4';
+import godtoppoVid from './videos/godtoppo-turn-around.mp4';
+import kakunsaVid from './videos/kakunsa-turn-around.mp4';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -675,7 +691,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726981661addtextcommda1nte2njcwndq.png"
               alt="2nd Form Frieza (Z)"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(secondformfriezaVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -727,7 +743,7 @@ function App() {
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmymtq3ndm4nji.png"
               alt="Golden Frieza"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(goldenfriezaVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -948,7 +964,7 @@ function App() {
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtqxmtazndexnti.png"
               alt="King Cold"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(kingcoldVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1078,7 +1094,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726354716addtextcommtg1nda1ntcwntq.png"
               alt="SSJ Broly (DBS)"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(ssjbrolydbsVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1117,7 +1133,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759066addtextcommta1odi2mzc5ntq.png"
               alt="Dr. Wheelo"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(drwheeloVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1195,7 +1211,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759066addtextcommta1mza0mzc4otq.png"
               alt="Bojack"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(bojackVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1273,7 +1289,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727123172addtextcommtyyntu0ntmyoq.png"
               alt="Super Baby 2"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(superbaby2Vid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1312,7 +1328,7 @@ function App() {
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommtmznte4ndm5nzk.png"
               alt="Spopovich"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(spopovichVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1338,7 +1354,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728272124addtextcommjmzndu3mjk5nzq.png"
               alt="SSR Goku Black"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(ssrgokublackVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1377,7 +1393,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728449886addtextcommda1nzexmtezodm.png"
               alt="Fused Zamasu (Corrupted)"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(cozamasuVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1390,7 +1406,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727123729addtextcommtyzmzq3ntm3mq.png"
               alt="Hit"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(hitVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1416,7 +1432,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727471699addtextcommtcxndmzmtuzotk.png"
               alt="Caulifla"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(cauliflaVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1429,7 +1445,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728701617addtextcommji1mze5ntaymzi.png"
               alt="SSJ2 Caulifla"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(ssj2cauliflaVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1442,7 +1458,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727117953addtextcommtq1odq4ndy4oq.png"
               alt="Berseker Kale"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(bskaleVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1533,7 +1549,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726759067addtextcommtexmte2mzgxndi.png"
               alt="Toppo (God of Destruction)"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(godtoppoVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1572,7 +1588,7 @@ function App() {
               src="https://tiermaker.com/images/media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/addtextcommti0njaxndazmjm.png"
               alt="Kakunsa"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(kakunsaVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
