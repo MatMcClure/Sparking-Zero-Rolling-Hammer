@@ -16,14 +16,18 @@ import greatapevegetaVid from './videos/greatapevegeta-turn-around.mp4';
 import supervegetaVid from './videos/supervegeta-turn-around.mp4';
 import ssj2vegetaVid from './videos/ssj2vegeta-turn-around.mp4';
 import ssj4vegetaVid from './videos/ssj4vegeta-turn-around.mp4';
+import ssj2teengohanVid from './videos/ssj2teengohan-turn-around.mp4';
 import ssj2gohanVid from './videos/ssj2gohan-turn-around.mp4';
 import greatsaiyanmanVid from './videos/greatsaiyanman-turn-around.mp4';
 import ultimategohanVid from './videos/ultimategohan-turn-around.mp4';
+import futuregohanVid from './videos/futuregohan-turn-around.mp4';
 import ssjfuturegohanVid from './videos/ssjfuturegohan-turn-around.mp4';
+import piccoloVid from './videos/piccolo-turn-around.mp4';
 import supertrunksVid from './videos/supertrunks-turn-around.mp4';
 import vegitoVid from './videos/vegito-turn-around.mp4';
 import vegitossVid from './videos/vegitoss-turn-around.mp4';
 import vegitoblueVid from './videos/vegitoblue-turn-around.mp4';
+import supergogetaVid from './videos/supergogeta-turn-around.mp4';
 import gogetadbsVid from './videos/gogetadbs-turn-around.mp4';
 import ssjgogetadbsVid from './videos/ssjgogetadbs-turn-around.mp4';
 import bluegogetaVid from './videos/bluegogeta-turn-around.mp4';
@@ -32,8 +36,12 @@ import videlVid from './videos/videl-turn-around.mp4';
 import roshiVid from './videos/roshi-turn-around.mp4';
 import secondformfriezaVid from './videos/secondformfrieza-turn-around.mp4';
 import fpfriezaVid from './videos/fpfrieza-turn-around.mp4';
+import finalfriezaVid from './videos/finalfrieza-turn-around.mp4';
 import goldenfriezaVid from './videos/goldenfrieza-turn-around.mp4';
+import secondformcellVid from './videos/secondformcell-turn-around.mp4';
+import perfectcellVid from './videos/perfectcell-turn-around.mp4';
 import majinbuuVid from './videos/majinbuu-turn-around.mp4';
+import superbuuVid from './videos/superbuu-turn-around.mp4';
 import bardockVid from './videos/bardock-turn-around.mp4';
 import nappaVid from './videos/nappa-turn-around.mp4';
 import dodoriaVid from './videos/dodoria-turn-around.mp4';
@@ -444,7 +452,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728315291addtextcommtezndi0mzm3ng.png"
               alt="Bardock"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(ssj2teengohanVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -496,7 +504,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728191270addtextcommdewnzm2mjeyndq.png"
               alt="Future Gohan"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(futuregohanVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -522,7 +530,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727117373addtextcommte1njm1ndcyng.png"
               alt="Piccolo (END)"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(piccoloVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -600,7 +608,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727656432addtextcommjazmze5njgxnzg.png"
               alt="Super Gogeta (Z)"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(supergogetaVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -730,7 +738,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1726514840addtextcommtuynzaxndmzmq.png"
               alt="Final Form Frieza (DBS)"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(finalfriezaVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -756,7 +764,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727022174addtextcommtiymje5nziwmde.png"
               alt="Cell 2nd Form"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(secondformcellVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -769,7 +777,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1728253978addtextcommtgzmjm4mju3ody.png"
               alt="Super Perfect Cell"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(perfectcellVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -795,7 +803,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1727969783addtextcommteznte4mzewody.png"
               alt="Super Buu"
               className="character"
-              //onClick={() => openCustomFullscreen(ssj3gtgokuVid)}
+              onClick={() => openCustomFullscreen(superbuuVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
