@@ -199,12 +199,20 @@ function App() {
     videoElement.style.objectFit = "cover";
     videoElement.loop = true;
   
-    // Close overlay on click outside the video
+    // Close overlay by clicking outside the video or pressing 'esc' key
     overlay.addEventListener("click", (e) => {
       if (e.target === overlay) {
         document.body.removeChild(overlay);
       }
     });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" || e.code === "Escape") {
+        if (document.body.contains(overlay)) {
+          document.body.removeChild(overlay);
+        }
+      }
+    })
   
     overlay.appendChild(videoElement);
     document.body.appendChild(overlay);
