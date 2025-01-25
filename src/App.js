@@ -1638,6 +1638,123 @@ function App() {
             />
           </div>
           )}
+
+          {/* Ultimate Gohan */}
+          {isCharacterMatch("ultimate gohan") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommdi0mtm0mtmwmja.png"
+              alt="Ultimate Gohan"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Beast Gohan */}
+          {isCharacterMatch("beast gohan") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737260425addtextcommjmxndu1mju1mjy.png"
+              alt="Beast Gohan"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Piccolo (SH) */}
+          {isCharacterMatch("piccolo sh") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommdizodi2mtmwmdy.png"
+              alt="Piccolo (SH)"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Ultimate Piccolo */}
+          {isCharacterMatch("ultimate piccolo") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjeznja4mjkwmdc.png"
+              alt="Ultimate Piccolo"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Orange Piccolo */}
+          {isCharacterMatch("orange piccolo") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjexnta2mjq5ndm.png"
+              alt="Orange Piccolo"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Giant Piccolo */}
+          {isCharacterMatch("giant piccolo") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommje1odq0mjuxodk.png"
+              alt="Giant Piccolo"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Gamma 1 */}
+          {isCharacterMatch("gamma 1") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjewmdqwmjq4nzu.png"
+              alt="Gamma 1"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Gamma 2 */}
+          {isCharacterMatch("gamma 2") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjewmza4mjq4odi.png"
+              alt="Gamma 2"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
+
+          {/* Cell Max */}
+          {isCharacterMatch("cell max") && (
+          <div>
+            <img
+              src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommdi0nte2mtmwnjc.png"
+              alt="Cell Max"
+              className="character"
+              //onClick={() => openCustomFullscreen(anilazaVid)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          )}
         </div>
         )}
       </div>
