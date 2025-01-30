@@ -105,6 +105,15 @@ import bergamoVid from './videos/bergamo-turn-around.mp4';
 import ribrianneVid from './videos/ribrianne-turn-around.mp4';
 import kakunsaVid from './videos/kakunsa-turn-around.mp4';
 import anilazaVid from './videos/anilaza-turn-around.mp4';
+import ultimategohanshVid from './videos/ultimategohansh-turn-around.mp4';
+import beastgohanVid from './videos/beastgohan-turn-around.mp4';
+import piccoloshVid from './videos/piccolosh-turn-around.mp4';
+import ultimatepiccoloVid from './videos/ultimatepiccolo-turn-around.mp4';
+import orangepiccoloVid from './videos/orangepiccolo-turn-around.mp4';
+import giantpiccoloVid from './videos/giantpiccolo-turn-around.mp4';
+import gamma1Vid from './videos/gamma1-turn-around.mp4';
+import gamma2Vid from './videos/gamma2-turn-around.mp4';
+import cellmaxVid from './videos/cellmax-turn-around.mp4';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -1639,14 +1648,14 @@ function App() {
           </div>
           )}
 
-          {/* Ultimate Gohan */}
+          {/* Ultimate Gohan (SH) */}
           {isCharacterMatch("ultimate gohan") && (
           <div>
             <img
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommdi0mtm0mtmwmja.png"
               alt="Ultimate Gohan"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(ultimategohanshVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1659,7 +1668,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737260425addtextcommjmxndu1mju1mjy.png"
               alt="Beast Gohan"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(beastgohanVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1672,7 +1681,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommdizodi2mtmwmdy.png"
               alt="Piccolo (SH)"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(piccoloshVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1685,7 +1694,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjeznja4mjkwmdc.png"
               alt="Ultimate Piccolo"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(ultimatepiccoloVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1698,7 +1707,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjexnta2mjq5ndm.png"
               alt="Orange Piccolo"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(orangepiccoloVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1711,7 +1720,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommje1odq0mjuxodk.png"
               alt="Giant Piccolo"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(giantpiccoloVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1724,7 +1733,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjewmdqwmjq4nzu.png"
               alt="Gamma 1"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(gamma1Vid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1737,7 +1746,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommjewmza4mjq4odi.png"
               alt="Gamma 2"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(gamma2Vid)}
               style={{ cursor: "pointer" }}
             />
           </div>
@@ -1750,7 +1759,7 @@ function App() {
               src="https://tiermaker.com/images//media/template_images/2024/28683/dragon-ball-sparking-zero-all-characters-w-names-28683-2/zzzzz-1737255755addtextcommdi0nte2mtmwnjc.png"
               alt="Cell Max"
               className="character"
-              //onClick={() => openCustomFullscreen(anilazaVid)}
+              onClick={() => openCustomFullscreen(cellmaxVid)}
               style={{ cursor: "pointer" }}
             />
           </div>
